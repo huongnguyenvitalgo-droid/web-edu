@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Global Retailer | 35 Năm Kinh Nghiệm Xuất Sắc</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&amp;family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#ffb693",
+              "outline": "#757682",
+              "on-secondary-fixed": "#00210c",
+              "surface-dim": "#dadada",
+              "on-tertiary-fixed": "#351000",
+              "on-surface": "#1a1c1c",
+              "inverse-surface": "#2f3131",
+              "on-secondary-container": "#00743a",
+              "on-primary-fixed": "#00174a",
+              "on-primary-container": "#758dd5",
+              "inverse-primary": "#b3c5ff",
+              "on-tertiary-fixed-variant": "#7a3000",
+              "on-surface-variant": "#444650",
+              "surface-container-high": "#e8e8e8",
+              "primary-container": "#002366",
+              "surface-container-low": "#f3f3f3",
+              "surface": "#f9f9f9",
+              "surface-container-lowest": "#ffffff",
+              "secondary-container": "#83fba5",
+              "outline-variant": "#c5c6d2",
+              "background": "#f9f9f9",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed-variant": "#2a4386",
+              "on-error-container": "#93000a",
+              "tertiary-fixed": "#ffdbcc",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-tint": "#435b9f",
+              "surface-bright": "#f9f9f9",
+              "primary-fixed": "#dbe1ff",
+              "secondary-fixed": "#83fba5",
+              "error": "#ba1a1a",
+              "tertiary": "#280b00",
+              "secondary": "#006d36",
+              "tertiary-container": "#491a00",
+              "primary-fixed-dim": "#b3c5ff",
+              "secondary-fixed-dim": "#66dd8b",
+              "on-error": "#ffffff",
+              "surface-container-highest": "#e2e2e2",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              "surface-container": "#eeeeee",
+              "primary": "#00113a",
+              "on-tertiary-container": "#e96a1d",
+              "on-secondary-fixed-variant": "#005227",
+              "error-container": "#ffdad6",
+              "surface-variant": "#e2e2e2",
+              "on-background": "#1a1c1c"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(20px);
+      }
+      .asymmetric-bleed {
+        width: calc(100% + 2rem);
+      }
+      @media (min-width: 1024px) {
+        .asymmetric-bleed {
+          width: calc(100% + 10vw);
+        }
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9f9f9]/80 dark:bg-slate-950/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<a class="font-['Noto_Serif'] text-2xl font-black text-[#00113a] dark:text-white tracking-tight" href="#">The Global Retailer</a>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-['Noto_Serif'] font-bold text-lg text-[#00113a] dark:text-white border-b-2 border-[#00113a] dark:border-blue-400 pb-1 transition-all duration-300" href="#home">Trang chủ</a>
+<a class="font-['Noto_Serif'] font-bold text-lg text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-white transition-colors hover:opacity-80 transition-all duration-300" href="#about">Giới thiệu</a>
+<a class="font-['Noto_Serif'] font-bold text-lg text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-white transition-colors hover:opacity-80 transition-all duration-300" href="#services">Dịch vụ</a>
+<a class="font-['Noto_Serif'] font-bold text-lg text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-white transition-colors hover:opacity-80 transition-all duration-300" href="#portfolio">Dự án</a>
+<a class="font-['Noto_Serif'] font-bold text-lg text-slate-600 dark:text-slate-400 hover:text-[#00113a] dark:hover:text-white transition-colors hover:opacity-80 transition-all duration-300" href="#contact">Liên hệ</a>
+</div>
+<a class="hidden md:block bg-primary text-white px-8 py-3 rounded-full font-bold hover:opacity-80 transition-all active:scale-95 duration-75" href="#contact">Tư vấn ngay</a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative overflow-hidden min-h-[921px] flex items-center" id="home">
+<div class="max-w-7xl mx-auto px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="inline-block bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-[0.75rem] font-bold tracking-widest uppercase mb-8">35+ Năm Kinh Nghiệm Xuất Sắc</span>
+<h1 class="font-headline text-primary text-5xl md:text-7xl lg:text-[3.5rem] leading-[1.1] font-black mb-8">
+                        Chiến lược Bán lẻ Toàn cầu. <br/>
+<span class="text-secondary italic">Được thiết kế</span> cho Ba Siêu cường.
+                    </h1>
+<p class="text-on-surface-variant text-xl max-w-xl mb-12 leading-relaxed">
+                        Điều phối sự tương tác phức tạp giữa hành vi người tiêu dùng và hậu cần vận hành tại Trung Quốc, Nhật Bản và Hoa Kỳ.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<a class="bg-gradient-to-br from-primary to-primary-container text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all active:scale-95" href="#contact">Bắt đầu thảo luận</a>
+<a class="flex items-center gap-3 text-primary font-bold hover:gap-5 transition-all" href="#portfolio">
+                            Xem Case Studies <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-5 relative h-[500px] lg:h-[819px] w-full">
+<div class="absolute inset-0 bg-surface-container-low rounded-xl lg:rounded-none lg:rounded-l-[4rem] overflow-hidden asymmetric-bleed shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Chuyên gia bán lẻ người Á Châu chuyên nghiệp và năng động trong bối cảnh doanh nghiệp hiện đại" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6HFdUhHnvD6J_FQ9llOE2AgCCtmWmGrUvVr6P9mI3ks64ce9MIcAIi4rMtVszjxqlbEQ-fPhgEJJthr5yJVs4bcHsnjCSFl-6en96vg0ZoGq73jWr7yWMYX4d9lXp1xsCV-2qjquAhgFkmSD8C7gtnLExBJjdatzn1tqLfeV8Z9V0h7nXrEN3A3MQo1WkmJmq9h4BnB7iFEEjQk5FMsimZ0uDgQ0qzYVbE9P-VwtLrkoNDjqBxoQ8LX510KmWBA2dFfnHfCTn44Zh"/>
+<div class="absolute bottom-10 left-10 bg-white/80 backdrop-blur-md p-6 rounded-xl border border-white/20">
+<div class="flex items-center gap-4">
+<span class="text-tertiary-container font-black text-4xl">3</span>
+<div class="text-xs uppercase tracking-tighter font-bold leading-none">
+                                    Châu lục<br/>Am tường
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Me -->
+<section class="py-24 bg-surface-container-low" id="about">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-fixed opacity-20 rounded-full blur-3xl"></div>
+<h2 class="font-headline text-3xl md:text-4xl text-primary font-bold mb-8">Trí tuệ Văn hóa &amp; <br/><span class="text-secondary">Quản trị Vận hành</span></h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>Sự nghiệp của tôi bắt đầu tại các hành lang tăng trưởng nhanh chóng của Thượng Hải, nơi tôi làm chủ nghệ thuật mở rộng bán lẻ tốc độ cao. Nền tảng này đã được tinh lọc qua nhiều thập kỷ tại văn hóa dịch vụ tỉ mỉ của Tokyo, kết hợp giữa sự chính xác và đổi mới.</p>
+<p>Ngày nay, tôi kết nối những thế giới này với chủ nghĩa thực dụng chiến lược của thị trường Hoa Kỳ. Tôi không chỉ nhìn thấy những con số; tôi thấy những sắc thái văn hóa thúc đẩy thương mại toàn cầu và các chuỗi cung ứng phức tạp duy trì chúng.</p>
+</div>
+<div class="mt-12 flex gap-12">
+<div>
+<div class="text-secondary font-black text-3xl mb-1">98%</div>
+<div class="text-xs uppercase font-bold tracking-widest">Tỷ lệ thành công</div>
+</div>
+<div>
+<div class="text-secondary font-black text-3xl mb-1">500+</div>
+<div class="text-xs uppercase font-bold tracking-widest">Cửa hàng đã khai trương</div>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="h-64 bg-surface-container-highest rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Đường chân trời đô thị hiện đại của Tokyo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpDz9vCtETusPn32XBWmQj6MHt33swnCO_2nEuARRfLF2jvXke_W-WLRyxlAYLb7PfyYkC1NVMky1m7k6HzaCaDd2_AFzmF_NQrXyOcNH3IHiSNLJFswOzPvKswLzC8aB793cKVT7BjjAuH4Sl2cSpMq-YdHuv99YxHOzjI3ScQjnxyaUqy8EwMYNdgSdQlhI41eu7TW9DmgE5Sj16fHdh2fwm2WEXwJsA40ljNE9nS7SYCJiRkZmW3oCoJDkPTVi8VjpGKnCR9vyD"/>
+</div>
+<div class="h-48 bg-secondary-container rounded-xl flex items-center justify-center p-8">
+<span class="font-headline text-on-secondary-container text-xl font-bold italic text-center">"Hiệu quả là văn hóa."</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="h-48 bg-primary-container rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-overlay opacity-60" data-alt="Kiến trúc hiện đại tại Thượng Hải" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLf4VHZBp4ZBhiTaNqfruyf9SOC461tvJvoA5DKshUqijgjQ52p4ivAYGK67ajkijAlpdZFXsTeoFe-yCC7k4sQ_M0xh296R67YQfJhJFJAvKhTRt6DQzL_lWWIEtpw9OKWYbRYnp91BAdgodY3Tk7zhNjftBY5prUVyHcT4-SSoFmgMziW3kwIcluxnWHUaCFHupl_8nxoM6aFsl2ni9ohyjJ7VMvX1lCScKOP4C1P-fHO3uPeigHQVFJp_HDA4-oTvmZhzdS6sX_"/>
+</div>
+<div class="h-64 bg-surface-container-highest rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Mặt tiền tòa nhà văn phòng tại New York" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiX6Npb0R6pJiFzEOQipeMJa-FcjxtDyy-rBBjwC6d6fWecIZJR6vqDppL7QbQUq-B-B8ArkhnKSv7EPDQczAA8-HFry7n2ON9xDFeT54WmSXUFkD5A7nDzxzvTDqT4860xUtx7Zd05I6M_StiL51RhvsruzxPbJvL2mKx-TwbxqyQmBMEjWMW5NsHhbuogmf4iajDdtIVEHU9Mq4ZzbqLfWJJAbGE4lz8CULSMd1izpuzv0uQfH38YBU2X4s_0G7bpsDqM47GzVzx"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services -->
+<section class="py-32" id="services">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<span class="text-on-tertiary-container font-bold text-sm tracking-widest uppercase mb-4 block">Năng lực</span>
+<h2 class="font-headline text-4xl md:text-5xl text-primary font-black">Dịch vụ Chiến lược Chuyên sâu</h2>
+</div>
+<p class="text-on-surface-variant max-w-xs pb-2 italic border-l-2 border-secondary pl-6">Các khung giải pháp tùy chỉnh được thiết kế cho những điểm ma sát xuyên biên giới.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Chiến lược thâm nhập thị trường -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:bg-primary-fixed transition-all duration-500 group shadow-sm hover:shadow-2xl">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-10 group-hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="public">public</span>
+</div>
+<h3 class="font-body font-bold text-2xl text-primary mb-6">Chiến lược thâm nhập thị trường</h3>
+<p class="text-on-surface-variant leading-relaxed">Lộ trình toàn diện để thâm nhập thị trường Trung Quốc, Nhật Bản hoặc Hoa Kỳ với định vị địa phương hóa và điểm tựa cạnh tranh.</p>
+<div class="mt-8 pt-8 border-t border-outline-variant/20 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="text-sm font-bold uppercase tracking-tighter">Tìm hiểu thêm</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- Tối ưu hóa chuỗi cung ứng -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:bg-primary-fixed transition-all duration-500 group shadow-sm hover:shadow-2xl">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-10 group-hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="inventory_2">inventory_2</span>
+</div>
+<h3 class="font-body font-bold text-2xl text-primary mb-6">Tối ưu hóa chuỗi cung ứng</h3>
+<p class="text-on-surface-variant leading-relaxed">Loại bỏ sự thiếu hiệu quả trong khu vực bằng cách hiện đại hóa khung hậu cần và thiết lập các mối quan hệ nhà cung cấp bền bỉ.</p>
+<div class="mt-8 pt-8 border-t border-outline-variant/20 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="text-sm font-bold uppercase tracking-tighter">Tìm hiểu thêm</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+<!-- Thấu hiểu người tiêu dùng -->
+<div class="bg-surface-container-lowest p-10 rounded-xl hover:bg-primary-fixed transition-all duration-500 group shadow-sm hover:shadow-2xl">
+<div class="w-16 h-16 bg-surface-container rounded-full flex items-center justify-center mb-10 group-hover:bg-white transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-body font-bold text-2xl text-primary mb-6">Thấu hiểu người tiêu dùng</h3>
+<p class="text-on-surface-variant leading-relaxed">Phân tích dân tộc học chuyên sâu và dựa trên dữ liệu để giải mã lý do tinh tế đằng sau thói quen mua hàng theo vùng miền.</p>
+<div class="mt-8 pt-8 border-t border-outline-variant/20 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="text-sm font-bold uppercase tracking-tighter">Tìm hiểu thêm</span>
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio -->
+<section class="py-32 bg-surface-container" id="portfolio">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-20">
+<h2 class="font-headline text-4xl text-primary font-black mb-4">Dự án Tiêu biểu (The Archival Ledger)</h2>
+<p class="text-on-surface-variant text-lg">Tuyển tập các chuyển đổi xuyên lục địa.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+<!-- Project 1: Nhật Bản -->
+<div class="md:col-span-8 group relative h-[500px] overflow-hidden rounded-xl bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Nội thất cửa hàng bách hóa cao cấp tại Ginza, Tokyo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2PieDQppPQlIloHGBVi1k3H7GtX_un94hYBPA271REYDW60bYhBP9brmXTrGJWKWq6-y5xLeJgl0F0dTalZtD8nmtQo2csc-7WNfgyduQHYSCeYnE3gW2AgoyQMJHneaiQ7y32JWUKfeLNE2tqA8Be76hFoXPHeTDJsOLJvuQYK00pp08hCxl5MIz-ZP_Qbw9nmXeyQByuDt-3LQAESarjkSoCQVcx08imzKqnhQ0C8kq4nktTVNfLa7e8bLyKEHuh2_uTXrIh_Eb"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent flex flex-col justify-end p-12">
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-4">Tokyo, Nhật Bản</span>
+<h3 class="text-white font-headline text-3xl font-bold mb-4">Hiện đại hóa trung tâm thương mại (Nhật Bản)</h3>
+<p class="text-white/80 max-w-md">Kết nối di sản Omotenashi với quản lý hàng tồn kho kỹ thuật số cho nhà bán lẻ xa xỉ 100 năm tuổi.</p>
+</div>
+</div>
+<!-- Project 2: Trung Quốc -->
+<div class="md:col-span-4 group relative h-[500px] overflow-hidden rounded-xl bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Trung tâm thương mại bán lẻ thông minh tại Thượng Hải" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVx-JR-_FkCIzgvc-xMHoYLT8EZDu6nACh-07vA7-qS9Jo6Wu3eUzZWLNI9NSKTyoJsH0a2LB846bvffSuDMbS3fbFyy93_C8UuUFLEgKxKOWbbnZGEBUjDvr0scw2b3hvwN5-NKQYBxJN_vIVbkJeK_Pz4sKZHAg_0ffwRK7q-SnnvaBSXBaxdDR1bwk8wIp3cwsScrbSHjN480i2Xn8oeWftzy9TY96LWTBTKVEGh-Npzx2J4uOCyLEiBmHMd0rU78ltr3mfDwx7"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent flex flex-col justify-end p-8">
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-2">Thượng Hải, Trung Quốc</span>
+<h4 class="text-white font-headline text-xl font-bold mb-2">Mở rộng đa kênh (Trung Quốc)</h4>
+<p class="text-white/80 text-sm">Triển khai hơn 50 ki-ốt bán lẻ thông minh trên khắp các khu kinh doanh hạng nhất trong vòng 12 tháng.</p>
+</div>
+</div>
+<!-- Project 3: Hoa Kỳ -->
+<div class="md:col-span-12 group relative h-[400px] overflow-hidden rounded-xl bg-surface-container-high">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Trung tâm phân phối bán lẻ hiện đại tại California, Hoa Kỳ" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb3aCCzf3B0jcVdKKChI3H__AaeYC8kF_QtkQdVcBmYNJjyvOF_mjXn826x73btGOYEte9BpaD8XQdc_mzgfCamt6kiejXFPkGmNsIoUxQnA7zIzA9Po2vKUPBZiu0QNafRL4d86jc8zwbxK37KIEg93unU0HxHRYK8WBXR2sNfKd7n2YpXWv1FAdn2R6xavWhLHRFYIvCR_W7BjqRMKMtbgGFZM9WByq4hvvJmMgOdPnE5QbH0S_7cQlC-skJlZzj1UxzOqbp9Xex"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-transparent to-transparent flex flex-col justify-center p-12">
+<div class="max-w-xl">
+<span class="text-tertiary-fixed-dim font-bold text-xs uppercase tracking-[0.2em] mb-4 block">California, Hoa Kỳ</span>
+<h3 class="text-white font-headline text-4xl font-bold mb-6">Mạng lưới cung ứng bền vững (Hoa Kỳ)</h3>
+<p class="text-white/80 text-lg">Tái cấu trúc mạng lưới phân phối Bắc Mỹ cho một tập đoàn may mặc lớn nhằm giảm 30% dấu chân carbon trong khi vẫn duy trì giao hàng trong 2 ngày.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="py-32" id="contact">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24">
+<div>
+<h2 class="font-headline text-5xl text-primary font-black mb-10 italic">Khởi đầu cuộc hội thoại</h2>
+<p class="text-on-surface-variant text-xl mb-12 leading-relaxed">Dù bạn đang lên kế hoạch mở rộng thị trường hay cần giải quyết các xung đột vận hành toàn cầu, tôi luôn sẵn sàng cho các cam kết tư vấn chọn lọc.</p>
+<div class="space-y-8">
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">mail</span>
+</div>
+<div>
+<div class="text-[0.7rem] uppercase font-bold text-on-surface-variant tracking-widest">Email Lưu trữ</div>
+<div class="text-primary font-bold">strategy@globalretailer.com</div>
+</div>
+</div>
+<div class="flex items-center gap-6 group">
+<div class="w-12 h-12 rounded-full border border-primary/20 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+</div>
+<div>
+<div class="text-[0.7rem] uppercase font-bold text-on-surface-variant tracking-widest">Hiện diện số</div>
+<div class="text-primary font-bold">LinkedIn / GlobalRetailExpert</div>
+</div>
+</div>
+</div>
+</div>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative group">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline/30 focus:border-secondary focus:ring-0 transition-all py-4 px-0 placeholder:text-on-surface-variant/50" placeholder="Họ và tên" type="text"/>
+</div>
+<div class="relative group">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline/30 focus:border-secondary focus:ring-0 transition-all py-4 px-0 placeholder:text-on-surface-variant/50" placeholder="Email công việc" type="email"/>
+</div>
+</div>
+<div class="relative group">
+<select class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline/30 focus:border-secondary focus:ring-0 transition-all py-4 px-0 text-on-surface-variant/50">
+<option>Loại hình yêu cầu</option>
+<option>Chiến lược thâm nhập thị trường</option>
+<option>Tối ưu hóa chuỗi cung ứng</option>
+<option>Tư vấn doanh nghiệp</option>
+</select>
+</div>
+<div class="relative group">
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline/30 focus:border-secondary focus:ring-0 transition-all py-4 px-0 placeholder:text-on-surface-variant/50 resize-none" placeholder="Mô tả ngắn gọn thách thức chiến lược" rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-primary text-white font-bold rounded-full text-lg shadow-xl hover:shadow-2xl hover:opacity-90 active:scale-[0.98] transition-all" type="submit">Gửi yêu cầu</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#eeeeee] dark:bg-slate-900 w-full py-20 mt-24">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<a class="font-['Noto_Serif'] font-bold text-[#00113a] dark:text-white text-xl" href="#">The Global Retailer</a>
+<p class="font-['Manrope'] text-sm tracking-wide uppercase text-slate-500 dark:text-slate-500">© 2024 The Global Retailer. 35 năm kinh nghiệm xuất sắc.</p>
+</div>
+<div class="flex gap-10">
+<a class="font-['Manrope'] text-sm tracking-wide uppercase text-slate-500 dark:text-slate-500 hover:text-[#00113a] dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-70" href="#">LinkedIn</a>
+<a class="font-['Manrope'] text-sm tracking-wide uppercase text-slate-500 dark:text-slate-500 hover:text-[#00113a] dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-70" href="#">Chính sách bảo mật</a>
+<a class="font-['Manrope'] text-sm tracking-wide uppercase text-slate-500 dark:text-slate-500 hover:text-[#00113a] dark:hover:text-blue-400 transition-colors opacity-100 hover:opacity-70" href="#">Điều khoản dịch vụ</a>
+</div>
+</div>
+</footer>
+<link rel="stylesheet" href="chatbot.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="chatbot.js"></script>
+</body></html>
