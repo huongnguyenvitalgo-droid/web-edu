@@ -163,48 +163,64 @@ Ví dụ: Khách nói "Tôi là Minh, SĐT 0901234567" → AI trả lời bình 
 
         showTypingIndicator();
 
-        try {
-            // Thay đổi sang OpenRouter API theo yêu cầu
-            const API_URL = "https://openrouter.ai/api/v1/chat/completions";
-            const API_KEY = "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";
-            const MODEL = "z-ai/glm-4.5-air:free";
+        // Gemini API (OpenAI-compatible endpoint)
+        const API_URL = "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions";
+        const API_KEY = "AIzaSyDQ3vhQZQIbkfXoqNaPqHIOFFNC3Q6BFLA";
+        const MODEL = "gemini-2.0-flash";
 
-            const payload = {
-                model: MODEL,
-                messages: messageHistory,
-            };
+        const MAX_RETRIES = 3;
 
-            const response = await fetch(API_URL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${API_KEY}`,
-                    'HTTP-Referer': window.location.href, // Required by OpenRouter
-                    'X-Title': 'Expert Retail Chatbot' // Optional for OpenRouter tracking
-                },
-                body: JSON.stringify(payload)
-            });
+        for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+            try {
+                const payload = {
+                    model: MODEL,
+                    messages: messageHistory,
+                };
 
-            const data = await response.json();
-            removeTypingIndicator();
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${API_KEY}`
+                    },
+                    body: JSON.stringify(payload)
+                });
 
-            if (data.choices && data.choices.length > 0) {
-                let botReply = data.choices[0].message.content;
+                // Nếu bị rate limit (429), đợi rồi thử lại
+                if (response.status === 429 && attempt < MAX_RETRIES) {
+                    const waitTime = attempt * 2000; // 2s, 4s, 6s
+                    console.warn(`⏳ Rate limit (429). Retry ${attempt}/${MAX_RETRIES} sau ${waitTime/1000}s...`);
+                    await new Promise(r => setTimeout(r, waitTime));
+                    continue;
+                }
 
-                // === LEAD CAPTURE: Bóc tách dữ liệu trước khi hiển thị ===
-                // processAIResponse() sẽ: (1) tìm tag ẩn, (2) gửi lên GG Sheets, (3) trả về câu trả lời sạch
-                const cleanReply = processAIResponse(botReply, messageHistory);
+                const data = await response.json();
+                removeTypingIndicator();
 
-                // Lưu phiên bản sạch vào lịch sử (không có tag ẩn)
-                messageHistory.push({ role: 'assistant', content: cleanReply });
-                appendMessage('bot', cleanReply, true);
-            } else {
-                appendMessage('bot', 'Xin lỗi, tôi đang gặp sự cố kết nối. Vui lòng thử lại sau.');
+                if (data.choices && data.choices.length > 0) {
+                    let botReply = data.choices[0].message.content;
+
+                    // === LEAD CAPTURE: Bóc tách dữ liệu trước khi hiển thị ===
+                    const cleanReply = processAIResponse(botReply, messageHistory);
+
+                    // Lưu phiên bản sạch vào lịch sử (không có tag ẩn)
+                    messageHistory.push({ role: 'assistant', content: cleanReply });
+                    appendMessage('bot', cleanReply, true);
+                } else if (data.error) {
+                    console.error("API Error:", data.error);
+                    appendMessage('bot', 'Xin lỗi, tôi đang gặp sự cố kết nối. Vui lòng thử lại sau.');
+                } else {
+                    appendMessage('bot', 'Xin lỗi, tôi đang gặp sự cố kết nối. Vui lòng thử lại sau.');
+                }
+                return; // Thành công hoặc lỗi không phải 429 → thoát vòng lặp
+
+            } catch (error) {
+                if (attempt === MAX_RETRIES) {
+                    console.error("API Error:", error);
+                    removeTypingIndicator();
+                    appendMessage('bot', 'Xin lỗi, đã xảy ra lỗi khi kết nối với máy chủ.');
+                }
             }
-        } catch (error) {
-            console.error("API Error:", error);
-            removeTypingIndicator();
-            appendMessage('bot', 'Xin lỗi, đã xảy ra lỗi khi kết nối với máy chủ.');
         }
     };
 
