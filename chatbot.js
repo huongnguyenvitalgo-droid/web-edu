@@ -184,7 +184,7 @@ Ví dụ 3: Khách nói "Cho tôi hỏi về khóa học quản trị chuỗi cu
         showTypingIndicator();
 
         // Gemini API qua Google AI (native endpoint)
-        const API_KEY = "AIzaSyA2PkD2y6KZJmHisX5i0RyKpWXv5t46oMw";
+        const API_KEY = "AIzaSyC7k4HO849ZPmcEP82lQjXid9zF_8MTTPE"; // ⚠️ LƯU Ý: Đây là API Key thật. Do code chạy hoàn toàn ở frontend nên sẽ lộ ra ngoài. GitGuardian có thể sẽ tiếp tục cảnh báo!
         const MODEL = "gemini-2.0-flash";
         const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
 
